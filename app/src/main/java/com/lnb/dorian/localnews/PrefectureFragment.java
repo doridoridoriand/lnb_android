@@ -20,9 +20,8 @@ import android.view.ViewGroup;
 public class PrefectureFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    //private static final String ARG_PARAM1 = "param1";
-    //private static final String ARG_PARAM2 = "param2";
     private static final String ARG_PARAM_RESOURCE_ID = "resource_id";
+    private static final String ARG_SECTION_NUMBER = "section_number";
     private int mResourceId;
 
     // TODO: Rename and change types of parameters
@@ -36,10 +35,14 @@ public class PrefectureFragment extends Fragment {
      * @return A new instance of fragment PrefectureFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static PrefectureFragment newInstance(int resourceId) {
+    public static PrefectureFragment newInstance(int resourceId, int sectionNumber) {
+        System.out.println(resourceId);
+        System.out.println("ああああああああああああああああああああああああああああああああああ");
+
         PrefectureFragment fragment = new PrefectureFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_PARAM_RESOURCE_ID, resourceId);
+        args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
         return fragment;
     }
@@ -68,6 +71,7 @@ public class PrefectureFragment extends Fragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+        ((MainActivity) activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
         try {
             mListener = (OnFragmentInteractionListener) activity;
         } catch (ClassCastException e) {

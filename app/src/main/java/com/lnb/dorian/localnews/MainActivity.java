@@ -51,8 +51,10 @@ public class MainActivity extends AppCompatActivity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         if (position == 0) {
-            fragmentManager.beginTransaction().replace(R.id.container, PrefectureFragment.newInstance(position + 1)).commit();
-        } else {
+            fragmentManager.beginTransaction().replace(R.id.container, PlaceholderFragment.newInstance(position + 1)).commit();
+        } else if (position == 1) {
+            fragmentManager.beginTransaction().replace(R.id.container, PrefectureFragment.newInstance(position + 1, position + 1)).commit();
+        } else if (position == 2) {
             fragmentManager.beginTransaction().replace(R.id.container, PlaceholderFragment.newInstance(position + 1)).commit();
         }
     }
@@ -61,7 +63,6 @@ public class MainActivity extends AppCompatActivity
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
-
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
