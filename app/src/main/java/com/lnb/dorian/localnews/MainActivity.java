@@ -19,7 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks, PrefectureFragment.OnFragmentInteractionListener {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks, PrefectureFragment.OnFragmentInteractionListener, ArticleFragment.OnFragmentInteractionListener {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity
         } else if (position == 1) {
             fragmentManager.beginTransaction().replace(R.id.container, PrefectureFragment.newInstance(position + 1, position + 1)).commit();
         } else if (position == 2) {
-            fragmentManager.beginTransaction().replace(R.id.container, PlaceholderFragment.newInstance(position + 1)).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, ArticleFragment.newInstance(position + 1, position + 1)).commit();
         }
     }
 

@@ -9,15 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-
 /**
+ * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link PrefectureFragment.OnFragmentInteractionListener} interface
+ * {@link ArticleFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link PrefectureFragment#newInstance} factory method to
+ * Use the {@link ArticleFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PrefectureFragment extends Fragment {
+public class ArticleFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM_RESOURCE_ID = "resource_id";
@@ -32,14 +32,11 @@ public class PrefectureFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @return A new instance of fragment PrefectureFragment.
+     * @return A new instance of fragment ArticleFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static PrefectureFragment newInstance(int resourceId, int sectionNumber) {
-        System.out.println(resourceId);
-        System.out.println("ああああああああああああああああああああああああああああああああああ");
-
-        PrefectureFragment fragment = new PrefectureFragment();
+    public static ArticleFragment newInstance(int resourceId, int sectionNumber) {
+        ArticleFragment fragment = new ArticleFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_PARAM_RESOURCE_ID, resourceId);
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
@@ -47,9 +44,8 @@ public class PrefectureFragment extends Fragment {
         return fragment;
     }
 
-    public PrefectureFragment() {
-        // Required
-        // empty public constructor
+    public ArticleFragment() {
+        // Required empty public constructor
     }
 
     @Override
@@ -64,7 +60,7 @@ public class PrefectureFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_prefecture, container, false);
+        return inflater.inflate(R.layout.fragment_article, container, false);
     }
 
     @Override

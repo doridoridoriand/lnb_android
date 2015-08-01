@@ -8,10 +8,15 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_example">Example action</string>
+    <string name="action_example">あああああ</string>
 
     <string name="action_settings">Settings</string>
 
 <!-- TODO: Remove or change this placeholder text -->
-    <string name="prefecture_fragment">Prefecture Fragment</string>
+    <string name="placeholder_fragment">メイン</string>
+    <string name="prefecture_fragment">都道府県選択</string>
+    <string name="article_fragment">設定</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
